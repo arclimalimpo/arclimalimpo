@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#073b78">
+  <meta name="description" content="Ar Clima Limpo - limpeza e higienização profissional de ar-condicionado em São Paulo e região.">
+  <title>Ar Clima Limpo | Limpeza e Higienização de Ar-Condicionado</title>
+
+  <style>
+    :root{
+      --blue:#073b78;
+      --blue2:#075b9e;
+      --blue3:#0b78b9;
+      --green:#19b94b;
+      --green-dark:#078d39;
+      --ink:#17324f;
+      --muted:#66788a;
+      --light:#f4f9fc;
+      --white:#ffffff;
+      --line:#dfeaf2;
+      --shadow:0 12px 35px rgba(14,76,116,.12);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    html{
+      scroll-behavior:smooth;
+      scroll-padding-top:90px;
+    }
+
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    /* TOPO */
+    .topbar{
+      background:var(--blue);
+      color:#fff;
+      text-align:center;
+      padding:8px 15px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .topbar a{color:#fff}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.97);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 4px 20px rgba(0,0,0,.06);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      flex:0 0 42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:linear-gradient(145deg,#0b8acb,#07518f);
+      color:#fff;
+      font-size:21px;
+      box-shadow:0 7px 18px rgba(7,91,158,.22);
+    }
+
+    .brand-name{
+      color:var(--blue);
+      font-size:18px;
+      font-weight:900;
+      line-height:1.05;
+    }
+
+    .brand-name span{color:var(--blue2)}
+    .brand-tag{
+      display:block;
+      margin-top:4px;
+      color:#1580ae;
+      font-size:8px;
+      letter-spacing:1.1px;
+      font-weight:800;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:25px;
+    }
+
+    nav a{
+      font-size:13px;
+      font-weight:800;
+      color:var(--ink);
+      transition:.2s;
+    }
+
+    nav a:hover{color:var(--blue3)}
+
+    .nav-whatsapp,
+    .btn-green{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:var(--green);
+      color:#fff;
+      border-radius:999px;
+      padding:12px 20px;
+      font-weight:900;
+      box-shadow:0 8px 22px rgba(25,185,75,.23);
+      transition:transform .2s,background .2s;
+    }
+
+    .nav-whatsapp{padding:10px 17px;font-size:12px}
+    .nav-whatsapp:hover,.btn-green:hover{background:var(--green-dark);transform:translateY(-2px)}
+
+    .menu-btn{
+      display:none;
+      width:44px;
+      height:44px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--blue);
+      cursor:pointer;
+      font-size:23px;
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 85% 18%, rgba(164,224,247,.48), transparent 28%),
+        radial-gradient(circle at 0% 100%, rgba(188,240,215,.42), transparent 24%),
+        linear-gradient(135deg,#fff 0%,#f7fcff 55%,#edf9ff 100%);
+    }
+
+    .hero-grid{
+      min-height:570px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);
+      align-items:center;
+      gap:45px;
+      padding:70px 0;
+    }
+
+    .eyebrow{
+      color:#1682ae;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:2.2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    h1{
+      color:var(--blue);
+      font-size:clamp(42px,5vw,66px);
+      line-height:1.02;
+      letter-spacing:-2.5px;
+      margin-bottom:20px;
+    }
+
+    h1 span{color:var(--green)}
+
+    .hero-copy{
+      max-width:620px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.75;
+      margin-bottom:26px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 21px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:900;
+      transition:.2s;
+    }
+
+    .btn-outline{
+      border:2px solid var(--blue);
+      color:var(--blue);
+      background:#fff;
+    }
+
+    .btn-outline:hover{background:#eef7fc;transform:translateY(-2px)}
+
+    .trust{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .trust span{
+      background:#fff;
+      border:1px solid #e5edf3;
+      box-shadow:0 7px 18px rgba(14,76,116,.08);
+      border-radius:12px;
+      padding:9px 13px;
+      font-size:11px;
+      font-weight:800;
+      text-align:center;
+    }
+
+    .hero-art{
+      position:relative;
+      min-height:390px;
+      display:grid;
+      place-items:center;
+    }
+
+    .air-bg{
+      position:absolute;
+      inset:0;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 30% 25%,rgba(115,204,241,.22),transparent 35%),
+        linear-gradient(145deg,#e9f8ff,#d8f0fb);
+      border:1px solid rgba(111,191,225,.15);
+    }
+
+    .air-bg:before,
+    .air-bg:after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(61,168,207,.25);
+      border-radius:50%;
+    }
+
+    .air-bg:before{inset:35px}
+    .air-bg:after{inset:75px}
+
+    .ac-unit{
+      position:relative;
+      z-index:2;
+      width:min(82%,430px);
+      height:220px;
+      border-radius:28px;
+      background:linear-gradient(#fff,#e8f0f3);
+      box-shadow:0 25px 45px rgba(18,78,111,.16);
+      border:1px solid #dfe9ee;
+    }
+
+    .ac-top{
+      width:76%;
+      height:54px;
+      margin:20px auto 0;
+      border-radius:13px;
+      background:linear-gradient(#eef5f7,#b8cbd3);
+    }
+
+    .ac-grille{
+      width:76%;
+      height:62px;
+      margin:13px auto 0;
+      border-bottom:4px solid #7b949f;
+      background:repeating-linear-gradient(
+        90deg,
+        #708b97 0 5px,
+        transparent 5px 14px
+      );
+      opacity:.9;
+    }
+
+    .air{
+      position:absolute;
+      right:26px;
+      bottom:20px;
+      font-size:48px;
+      transform:rotate(-8deg);
+      opacity:.7;
+    }
+
+    .air-label{
+      position:absolute;
+      z-index:4;
+      left:25px;
+      bottom:25px;
+      background:#fff;
+      border-radius:999px;
+      padding:10px 17px;
+      color:var(--blue);
+      font-size:13px;
+      font-weight:900;
+      box-shadow:var(--shadow);
+    }
+
+    /* SEÇÕES */
+    section{padding:78px 0}
+
+    .section-head{
+      max-width:760px;
+      margin:0 auto 36px;
+      text-align:center;
+    }
+
+    .section-head .eyebrow{margin-bottom:9px}
+
+    .section-head h2{
+      color:var(--blue);
+      font-size:clamp(30px,4vw,42px);
+      line-height:1.12;
+      margin-bottom:10px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .services{background:#f5fafc}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .card{
+      min-height:250px;
+      background:#fff;
+      border:1px solid #e4edf2;
+      border-radius:20px;
+      padding:26px 22px;
+      box-shadow:0 10px 28px rgba(14,76,116,.08);
+      transition:transform .2s,box-shadow .2s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 35px rgba(14,76,116,.13);
+    }
+
+    .icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:#eaf7fc;
+      font-size:22px;
+      margin-bottom:16px;
+    }
+
+    .card h3{
+      color:var(--blue);
+      font-size:17px;
+      line-height:1.35;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    /* VANTAGENS */
+    .why{
+      color:#fff;
+      background:linear-gradient(135deg,#063b77,#087cb7);
+    }
+
+    .why .section-head h2,
+    .why .section-head p{color:#fff}
+
+    .why .eyebrow{color:#9de5ff}
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .why-item{
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.09);
+      border-radius:18px;
+      padding:23px;
+      backdrop-filter:blur(4px);
+    }
+
+    .why-item h3{
+      font-size:16px;
+      margin-bottom:8px;
+    }
+
+    .why-item p{
+      color:rgba(255,255,255,.82);
+      font-size:13px;
+    }
+
+    /* PROCESSO */
+    .process{background:#fff}
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .step{
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:27px;
+      box-shadow:0 10px 26px rgba(14,76,116,.06);
+    }
+
+    .step-num{
+      width:40px;
+      height:40px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#e9f7fd;
+      color:var(--blue2);
+      font-weight:900;
+      margin-bottom:15px;
+    }
+
+    .step h3{color:var(--blue);margin-bottom:8px;font-size:18px}
+    .step p{color:var(--muted);font-size:14px}
+
+    /* DEPOIMENTOS */
+    .testimonials{background:#f5fafc}
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .quote{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:25px;
+      box-shadow:0 10px 26px rgba(14,76,116,.06);
+    }
+
+    .stars{color:#f4b400;letter-spacing:2px;margin-bottom:10px}
+    .quote p{color:var(--muted);font-size:14px;margin-bottom:15px}
+    .quote strong{color:var(--blue);font-size:13px}
+
+    /* FAQ */
+    .faq{background:#fff}
+
+    .faq-list{
+      max-width:850px;
+      margin:auto;
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      overflow:hidden;
+    }
+
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding:18px 20px;
+      color:var(--blue);
+      font-weight:900;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    details p{padding:0 20px 19px;color:var(--muted);font-size:14px}
+
+    /* CTA */
+    .cta{
+      padding:55px 0;
+      background:linear-gradient(135deg,#edf9ff,#f5fff8);
+    }
+
+    .cta-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      padding:38px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .cta h2{color:var(--blue);font-size:clamp(26px,4vw,38px);line-height:1.15;margin-bottom:8px}
+    .cta p{color:var(--muted);max-width:650px}
+
+    /* COBERTURA + RODAPÉ */
+    .coverage{
+      padding:42px 0;
+      color:#fff;
+      background:var(--blue);
+      text-align:center;
+    }
+
+    .coverage h2{font-size:22px;margin-bottom:7px}
+    .coverage p{color:#d6edf8;font-size:14px}
+
+    footer{
+      background:#062b57;
+      color:#d8e8f3;
+      padding:35px 0 100px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr;
+      gap:35px;
+    }
+
+    footer h3{color:#fff;font-size:15px;margin-bottom:10px}
+    footer p,footer a{font-size:13px;color:#c5d9e7}
+    footer a:hover{color:#fff}
+    .footer-links{list-style:none;display:grid;gap:7px}
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.12);
+      margin-top:25px;
+      padding-top:20px;
+      font-size:12px;
+      color:#a9c2d4;
+    }
+
+    /* WHATSAPP FIXO */
+    .floating-whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:1200;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background:var(--green);
+      color:#fff;
+      padding:14px 19px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:900;
+      box-shadow:0 10px 28px rgba(25,185,75,.3);
+    }
+
+    .floating-whatsapp:hover{background:var(--green-dark)}
+
+    /* MOBILE */
+    @media (max-width:900px){
+      .container{width:min(var(--max),calc(100% - 30px))}
+      nav ul{gap:15px}
+      nav a{font-size:12px}
+      .nav-whatsapp{display:none}
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        padding:55px 0 60px;
+        gap:30px;
+      }
+
+      .hero-copy{font-size:16px}
+      .hero-art{min-height:340px}
+      .cards,.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .steps,.testimonial-grid{grid-template-columns:1fr}
+      .cta-box{flex-direction:column;align-items:flex-start}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width:680px){
+      .topbar{font-size:11px;padding:7px 10px}
+
+      header{position:relative}
+
+      .nav{
+        min-height:68px;
+        gap:10px;
+      }
+
+      .brand-mark{width:38px;height:38px;flex-basis:38px;font-size:19px}
+      .brand-name{font-size:16px}
+      .brand-tag{font-size:7px;letter-spacing:.8px}
+
+      .menu-btn{display:block}
+
+      nav{
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+        background:#fff;
+        border-bottom:1px solid var(--line);
+        box-shadow:0 15px 25px rgba(0,0,0,.08);
+        display:none;
+      }
+
+      nav.open{display:block}
+
+      nav ul{
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:8px 15px 15px;
+      }
+
+      nav li{border-bottom:1px solid #eef3f6}
+      nav li:last-child{border-bottom:0}
+
+      nav a{
+        display:block;
+        padding:13px 8px;
+        font-size:14px;
+      }
+
+      .hero-grid{padding:45px 0 50px}
+      h1{font-size:42px;letter-spacing:-1.8px}
+      .hero-copy{font-size:15px;line-height:1.65}
+      .buttons{display:grid;grid-template-columns:1fr;gap:10px}
+      .btn{width:100%}
+
+      .trust{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .trust span{font-size:10px;padding:9px 6px}
+
+      .hero-art{min-height:290px}
+      .ac-unit{height:165px;width:82%;border-radius:22px}
+      .ac-top{height:38px;margin-top:15px}
+      .ac-grille{height:45px;margin-top:10px}
+      .air{font-size:36px;right:18px;bottom:14px}
+      .air-label{left:12px;bottom:12px;font-size:11px;padding:8px 12px}
+
+      section{padding:58px 0}
+      .section-head{margin-bottom:28px}
+      .section-head h2{font-size:31px}
+      .section-head p{font-size:14px}
+
+      .cards,.why-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .card{
+        min-height:0;
+        padding:22px;
+      }
+
+      .why-item{padding:20px}
+      .steps,.testimonial-grid{gap:14px}
+
+      .cta{padding:40px 0}
+      .cta-box{padding:27px 22px}
+      .cta .btn-green{width:100%}
+
+      .footer-grid{grid-template-columns:1fr}
+      footer{padding-bottom:90px}
+
+      .floating-whatsapp{
+        right:14px;
+        bottom:14px;
+        padding:13px 17px;
+        font-size:12px;
+      }
+    }
+
+    @media (max-width:380px){
+      .container{width:calc(100% - 24px)}
+      h1{font-size:37px}
+      .hero-art{min-height:260px}
+      .ac-unit{height:145px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    📍 São Paulo e região &nbsp; • &nbsp; 💬 Orçamento rápido pelo WhatsApp
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ar Clima Limpo - início">
+        <div class="brand-mark">❄</div>
+        <div>
+          <div class="brand-name">AR CLIMA <span>LIMPO</span></div>
+          <small class="brand-tag">CONFORTO QUE VOCÊ RESPIRA</small>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav id="nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a class="nav-whatsapp" href="https://wa.me/5511942557811?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20limpeza%20e%20higienização%20de%20ar-condicionado." target="_blank" rel="noopener">💬 WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">Ambiente mais saudável e confortável</div>
+          <h1>Ar-condicionado<br>limpo.<br><span>Vida mais leve.</span></h1>
+
+          <p class="hero-copy">
+            Limpeza e higienização profissional para ajudar a manter seu aparelho mais limpo,
+            confortável e pronto para o uso.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-green" href="https://wa.me/5511942557811?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20limpeza%20e%20higienização%20de%20ar-condicionado." target="_blank" rel="noopener">
+              💬 Solicitar pelo WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#servicos">Conhecer serviços</a>
+          </div>
+
+          <div class="trust">
+            <span>✓ Atendimento<br>rápido</span>
+            <span>✓ Serviço<br>profissional</span>
+            <span>✓ Produtos<br>adequados</span>
+            <span>✓ São<br>Paulo/SP</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Ilustração de ar-condicionado higienizado">
+          <div class="air-bg"></div>
+          <div class="ac-unit">
+            <div class="ac-top"></div>
+            <div class="ac-grille"></div>
+            <div class="air">💨</div>
+          </div>
+          <div class="air-label">🫧 Limpeza + Higienização</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Nossos serviços</div>
+          <h2>Cuidado que faz diferença</h2>
+          <p>Serviços focados em limpeza e higienização de aparelhos de ar-condicionado.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">❄️</div>
+            <h3>Limpeza de Split</h3>
+            <p>Limpeza das áreas do aparelho que acumulam poeira e resíduos.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🫧</div>
+            <h3>Higienização</h3>
+            <p>Cuidados para remover sujeira e resíduos acumulados no equipamento.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">✨</div>
+            <h3>Higienização profunda</h3>
+            <p>Serviço mais completo para aparelhos que precisam de atenção extra.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏠</div>
+            <h3>Residencial e comercial</h3>
+            <p>Atendimento para casas, apartamentos, escritórios, lojas e outros ambientes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="vantagens">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Por que contratar a Ar Clima Limpo?</div>
+          <h2>Mais cuidado com seu aparelho e seu ambiente</h2>
+          <p>Uma rotina de limpeza ajuda a manter o equipamento em melhores condições de uso.</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-item">
+            <h3>💙 Mais conforto</h3>
+            <p>Um ambiente limpo e agradável para o dia a dia.</p>
+          </article>
+
+          <article class="why-item">
+            <h3>⚙️ Melhor funcionamento</h3>
+            <p>A limpeza ajuda a reduzir o acúmulo de sujeira no aparelho.</p>
+          </article>
+
+          <article class="why-item">
+            <h3>🫧 Mais cuidado</h3>
+            <p>Higienização feita com atenção às áreas do equipamento.</p>
+          </article>
+
+          <article class="why-item">
+            <h3>⭐ Atendimento profissional</h3>
+            <p>Serviço pensado para facilitar sua rotina e cuidar do aparelho.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="resultados">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Como funciona</div>
+          <h2>Atendimento simples e direto</h2>
+          <p>Do primeiro contato ao serviço, você sabe o que esperar.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Agendamento</h3>
+            <p>Combinamos o melhor dia e horário para realizar o atendimento.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Avaliação</h3>
+            <p>Verificamos o aparelho e identificamos os cuidados necessários.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Limpeza e higienização</h3>
+            <p>Realizamos o serviço com cuidado e deixamos o ambiente organizado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Experiência de clientes</div>
+          <h2>Quem cuida, percebe a diferença</h2>
+          <p>Depoimentos podem ser adicionados aqui conforme novos atendimentos forem realizados.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="quote">
+            <div class="stars">★★★★★</div>
+            <p>“Atendimento rápido e serviço muito bem explicado. O aparelho ficou muito mais limpo.”</p>
+            <strong>Cliente residencial</strong>
+          </article>
+
+          <article class="quote">
+            <div class="stars">★★★★★</div>
+            <p>“Gostei da organização durante o serviço e da atenção aos detalhes.”</p>
+            <strong>Cliente residencial</strong>
+          </article>
+
+          <article class="quote">
+            <div class="stars">★★★★★</div>
+            <p>“Foi fácil agendar pelo WhatsApp e o atendimento foi profissional.”</p>
+            <strong>Cliente comercial</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="duvidas">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Dúvidas</div>
+          <h2>Perguntas frequentes</h2>
+          <p>Confira algumas informações antes de solicitar seu orçamento.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Com que frequência devo limpar o ar-condicionado?</summary>
+            <p>A frequência depende do uso, do ambiente e das condições do aparelho. Uma avaliação ajuda a definir a necessidade de limpeza.</p>
+          </details>
+
+          <details>
+            <summary>Vocês atendem residências e empresas?</summary>
+            <p>Sim. O atendimento pode ser feito em casas, apartamentos, escritórios, lojas e outros ambientes.</p>
+          </details>
+
+          <details>
+            <summary>Como solicito um orçamento?</summary>
+            <p>Basta tocar em qualquer botão de WhatsApp da página e enviar sua mensagem. O atendimento pode orientar sobre o serviço adequado.</p>
+          </details>
+
+          <details>
+            <summary>Preciso informar o modelo do aparelho?</summary>
+            <p>Se souber o modelo, pode informar. Fotos do aparelho também podem ajudar na avaliação inicial.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="eyebrow">Orçamento rápido</div>
+            <h2>Seu ar-condicionado merece esse cuidado.</h2>
+            <p>Fale pelo WhatsApp e solicite informações sobre limpeza e higienização para seu aparelho.</p>
+          </div>
+
+          <a class="btn btn-green" href="https://wa.me/5511942557811?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20limpeza%20e%20higienização%20de%20ar-condicionado." target="_blank" rel="noopener">
+            💬 Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="coverage">
+      <div class="container">
+        <h2>📍 Atendemos São Paulo e região</h2>
+        <p>Entre em contato para verificar atendimento na sua região.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h3>AR CLIMA LIMPO</h3>
+          <p>Limpeza e higienização de ar-condicionado.</p>
+          <p>Conforto que você respira.</p>
+        </div>
+
+        <div>
+          <h3>Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#vantagens">Vantagens</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <p><a href="https://wa.me/5511942557811?text=Olá!%20Quero%20informações%20sobre%20os%20serviços." target="_blank" rel="noopener">💬 WhatsApp</a></p>
+          <p>📍 São Paulo e região</p>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Ar Clima Limpo. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5511942557811?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20limpeza%20e%20higienização%20de%20ar-condicionado." target="_blank" rel="noopener" aria-label="Falar com a Ar Clima Limpo pelo WhatsApp">
+    💬 Fale no WhatsApp
+  </a>
+
+  <script>
+    (function(){
+      const menuBtn = document.getElementById('menuBtn');
+      const nav = document.getElementById('nav');
+
+      menuBtn.addEventListener('click', function(){
+        const aberto = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+        menuBtn.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+        menuBtn.textContent = aberto ? '✕' : '☰';
+      });
+
+      document.querySelectorAll('#nav a').forEach(function(link){
+        link.addEventListener('click', function(){
+          nav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded','false');
+          menuBtn.setAttribute('aria-label','Abrir menu');
+          menuBtn.textContent = '☰';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
