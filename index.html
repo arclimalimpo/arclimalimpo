@@ -972,69 +972,36 @@ Mais saúde, conforto e eficiência para o seu dia a dia.
 </a>
 
 <script>
-  const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
 if (menuBtn && nav) {
   menuBtn.addEventListener("click", function () {
     nav.classList.toggle("open");
-
-    if (nav.classList.contains("open")) {
-      nav.style.display = "block";
-      nav.style.position = "absolute";
-      nav.style.top = "70px";
-      nav.style.left = "20px";
-      nav.style.right = "20px";
-      nav.style.background = "#ffffff";
-      nav.style.padding = "20px";
-      nav.style.borderRadius = "15px";
-      nav.style.zIndex = "9999";
-      nav.style.boxShadow = "0 10px 30px rgba(0,0,0,0.20)";
-    } else {
-      nav.style.display = "";
-      nav.style.position = "";
-      nav.style.top = "";
-      nav.style.left = "";
-      nav.style.right = "";
-      nav.style.background = "";
-      nav.style.padding = "";
-      nav.style.borderRadius = "";
-      nav.style.zIndex = "";
-      nav.style.boxShadow = "";
-    }
   });
 
   nav.querySelectorAll("a").forEach(function(link) {
     link.addEventListener("click", function () {
       nav.classList.remove("open");
-      nav.style.display = "";
-      nav.style.position = "";
-      nav.style.top = "";
-      nav.style.left = "";
-      nav.style.right = "";
-      nav.style.background = "";
-      nav.style.padding = "";
-      nav.style.borderRadius = "";
-      nav.style.zIndex = "";
-      nav.style.boxShadow = "";
     });
   });
 }
-function enviarWhatsApp(event){
-event.preventDefault();
 
-const nome=document.getElementById("nome").value;
-const telefone=document.getElementById("telefone").value;
-const servico=document.getElementById("servico").value;
+function enviarWhatsApp(event) {
+  event.preventDefault();
 
-const mensagem=
-"Olá! Gostaria de solicitar um orçamento.%0A%0A"+
-"Nome: "+encodeURIComponent(nome)+"%0A"+
-"WhatsApp: "+encodeURIComponent(telefone)+"%0A"+
-"Serviço: "+encodeURIComponent(servico);
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const servico = document.getElementById("servico").value;
 
-window.location.href=
-"https://wa.me/5511942557811?text="+mensagem;
+  const mensagem =
+    "Olá! Gostaria de solicitar um orçamento.%0A%0A" +
+    "Nome: " + encodeURIComponent(nome) + "%0A" +
+    "WhatsApp: " + encodeURIComponent(telefone) + "%0A" +
+    "Serviço: " + encodeURIComponent(servico);
+
+  window.location.href =
+    "https://wa.me/5511942557811?text=" + mensagem;
 }
 </script>
 
